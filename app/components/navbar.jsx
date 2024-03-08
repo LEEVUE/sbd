@@ -8,7 +8,7 @@ export default function Navbar() {
             <ul className="menu">
                 <li><Link href="/">ໜ້າທຳອິດ</Link></li>
                 <li><Link href="/legal">ພາລະບົດບາດ</Link></li>
-                <li className="legal"><Link href="">ນິຕິກຳ<span class="material-symbols-rounded arrowDown">keyboard_arrow_down</span></Link>
+                <li className="legal"><Link href="">ນິຕິກຳ<span class="material-symbols-outlined">expand_more</span></Link>
                     <ul className="submenu">
                         <li><Link href="#">ກົດໝາຍ ແລະ ນິຕິກຳລຸ່ມກົດໝາຍ</Link></li>
                         <li><Link href="#">ສາລະບານງົບປະມານ-ບັນຊີ</Link></li>

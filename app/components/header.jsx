@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header>
         <Image
-            src={logo}
+            src="/public/g-icon/expand.svg"
             width={100}
             height={100}
             alt="logo"
