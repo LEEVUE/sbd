@@ -1,0 +1,39 @@
+footer {
+    background-color: #314448;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.footer-container {
+    height: var(--footer-height);
+}
+.social-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.social-container a {
+    display: flex;
+    align-items: center;
+    line-height: 25px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: wheat;
+}
+footer span {
+    padding: 0 10px;
+}
+a:hover .bi-facebook {
+    color: #0866ff;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+a:hover .bi-youtube {
+    color: #ff0000;
+}
+a:hover .bi-whatsapp {
+    color: #0dc143;
+}
+a:hover .bi-envelope-fill {
+    color: #38d6fe;
+}

@@ -17,23 +17,20 @@ export const metadata = {
   content: "width=device-width, initial-scale=1.0",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({Component, pageProps, children }) {
   return (
     <html lang="lo">
       <head>
-        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> */}
+
       </head>
       <body>
         <Header/>
         <Navbar/>
-        <div>dfgd</div>
-        <hr />
         <div className="body-container">
-          <div className="left-right item-body"></div>
+          <marquee id="myMarquee" behavior="" direction="left" style={{cursor: "pointer"}}>ດຳລັດ ວ່າດ້ວຍການສ້າງແຜນງົບປະມານ | ຄຳແນະນຳຈັດຕັ້ງປະຕິບັດແຜນງົບປະມານແຫ່ງລັດ ປະຈຳປີ 2024</marquee>
           <div className="item-body" id="children">
             <section>{children}</section>
           </div>
-          <div className="left-right item-body"></div>
         </div>
         <Footer/>
       </body>

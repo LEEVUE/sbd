@@ -1,22 +1,30 @@
 header{
-    display: flex;
-    align-items: center;
     background: #0053a2;
     font-weight: bold;
     color: white;
-    padding: 10px 0;
+    padding: 10px;
+    height: var(--header-h);
+}
+.header-container {
+    align-items: center;
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 .sbd-label {
     /* font-family: "Phetsarath OT"; */
-    display: flex;
     margin-left: 20px;
-    flex-direction: column;
     position: relative;
     width: max-content;
 }
 .sbd-lao {
     font-size: 20pt;
     letter-spacing: 0.15rem;
+}
+.sbd-eng{
+    margin-top: 10px;
+    font-size: 12pt;
+    letter-spacing: 0.07rem;
 }
 .sbd-lao::after {
     content: "";
@@ -36,9 +44,4 @@ header{
 @keyframes label-underline {
     0% {width: 0%;}
     100% {width: 100%;}
-}
-.sbd-eng{
-    margin-top: 10px;
-    font-size: 12pt;
-    letter-spacing: 0.07rem;
 }

@@ -90,7 +90,8 @@
         left: 0;
         min-width: max-content;
         visibility: hidden;
-        box-shadow: 0 1px 3px rgba(207, 207, 207, 0.9), 0 1px 2px rgba(0, 0, 0, 0.24);
+        z-index: 1;
+        box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
     }
     .menu li span {
         margin-left: 5px;
@@ -116,7 +117,7 @@
         visibility: visible;
     }
     .submenu li a:hover {
-        background-color: rgba(128, 255, 0, 0.575);
+        background-color: rgb(128, 255, 0);
         border-radius: 4px;
         width: 100%;
     }
