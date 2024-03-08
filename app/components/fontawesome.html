@@ -1,0 +1,92 @@
+<style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  flex-direction: column;
+}
+* a {
+  text-decoration: none;
+}
+* li {
+  list-style: none;
+}
+.navbar {
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
+}
+ul {
+  display: flex;
+}
+li {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+li a {
+  padding: 20px 30px;
+  color: #5dade2;
+}
+li a i {
+  margin-left: 5px;
+  font-size: 12px;
+  transition: 0.4s;
+}
+li:hover {
+  background-color: #f9f9f9;
+}
+.dropdown {
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  top: 120%;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.3s;
+  left: 0;
+  width: 200px;
+}
+.dropdown-link:hover .dropdown {
+  top: 105%;
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-link:hover a i {
+  transform: rotate(-180deg);
+}
+</style>
+<div class="navbar">
+  <ul>
+    <li><a href="">Home</a></li>
+    <li class="dropdown-link">
+      <a href="">Dropdown
+        <i class="fas fa-chevron-down">A</i>
+      </a>
+      <ul class="dropdown">
+        <li><a href="#">
+            Dropdown 1
+          </a></li>
+        <li><a href="#">
+            Dropdown 2
+          </a></li>
+        <li><a href="#">
+            Dropdown 3
+          </a></li>
+      </ul>
+    </li>
+    <li><a href="">About</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
+</div>

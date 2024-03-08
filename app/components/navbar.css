@@ -1,0 +1,142 @@
+@media screen and (max-width: 650px) {
+    .menu{
+        display: block;
+        list-style: none;
+        background-color: darkslategrey;
+        text-align: center;
+        max-width: 80vw;
+        height: 100vh;
+    }
+    .menu li{
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 200%;
+        text-align: left;
+        list-style: none;
+    }
+    .menu a{
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        padding-left: 15px;
+        transition: 0.2s;
+    }
+    .menu > li > a:hover{
+        background-color: lightgray;
+    }
+    .submenu{
+        font-size: 0.75em;
+        margin-left: 25px;
+        border-left: 1px solid gray;
+    }
+    .submenu li{
+        line-height: 160%;
+        font-weight: normal;
+        position: relative;
+        left: -5px;
+    }
+    .submenu li a:hover {
+        background-color: chartreuse;
+    }
+}
+
+/* ຕັ້ງຄ່າເມນູສຳລັບອຸປະກອນຂະໜາດຈໍໃຫຍ່ */
+@media screen and (min-width: 650px){
+    nav {
+        background-color: #083c6f;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    nav li {
+        font-size: 14pt;
+        font-weight: bold;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        position:relative;
+        list-style: none;
+    }
+    nav li a {
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+    }
+    nav a:active {
+        outline: 5px;
+        background-color: brown;
+    }
+    /* li a i {
+        margin-left: 5px;
+        font-size: 12px;
+        transition: 0.4s;
+    } */
+    .menu > li > a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #fff;
+    }
+    
+    /* ກຳນົດລູກສອນໝຸນໂອໂຕ້ເວລາ hover */
+    .submenu {
+        position: absolute;
+        display: block;
+        background-color: darkolivegreen;
+        top: 120%;
+        opacity: 0;
+        border-radius: 4px;
+        transition: 0.3s;
+        left: 0;
+        min-width: max-content;
+        visibility: hidden;
+        box-shadow: 0 1px 3px rgba(207, 207, 207, 0.9), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    .menu li .arrowDown {
+        margin-left: 5px;
+        transition: 0.3s;
+    }
+    .menu :hover .arrowDown {
+        transform: rotate(-180deg);
+    }
+    /* ກຳນົດລູກສອນໝຸນໂອໂຕ້ເວລາ hover */
+    
+    .submenu li {
+        font-size: 12pt;
+        font-weight: normal;
+        padding: 4px;
+        letter-spacing: 0;
+    }
+    .submenu li a {
+        padding: 7px 10px;
+    }
+    li:hover .submenu {
+        top: 110%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .submenu li a:hover {
+        background-color: rgba(128, 255, 0, 0.575);
+        border-radius: 4px;
+        width: 100%;
+    }
+    a::after {
+        content: "";
+        position: absolute;
+        background-color: #ffbb00;
+        height: 0.2rem;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        border-radius: 1px;
+        opacity: 0;
+        transform: scaleX(0);
+        transition: all 0.3s ease;
+        transform-style:preserve-3d;
+    }
+    .menu > li > a:hover:after{
+        opacity: 1;
+        transform: scaleX(1);
+        height: 0.2rem;
+    }
+}
