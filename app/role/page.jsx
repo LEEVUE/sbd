@@ -1,7 +1,9 @@
+import { FaExpand } from "react-icons/fa6";
+
 export default function about() {
     return (
-          <p>
-            ພາລະບົດບາດ
-          </p>
+          <h1>
+            ພາລະບົດບາດ ຂອງກົມງົບປະມານແຫ່ງລັດ
+          </h1>
     );
   }

@@ -8,8 +8,8 @@ export default function Header() {
       <div className='header-container'>
         <Image
             src="/mof.png"
-            width={90}
-            height={90}
+            width={80}
+            height={80}
             alt="logo"
         />
         <div className="sbd-label">

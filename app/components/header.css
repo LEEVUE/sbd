@@ -10,10 +10,10 @@ header{
     display: flex;
     max-width: var(--max-width);
     margin: 0 auto;
+    padding-left: 50px;
 }
 .sbd-label {
-    /* font-family: "Phetsarath OT"; */
-    margin-left: 20px;
+    margin-left: 15px;
     position: relative;
     width: max-content;
 }
@@ -30,7 +30,7 @@ header{
     content: "";
     position: absolute;
     background-color: white;
-    height: 2px;
+    height: 1px;
     width: 100%;
     bottom: 25px;
     left: 0;
@@ -44,4 +44,11 @@ header{
 @keyframes label-underline {
     0% {width: 0%;}
     100% {width: 100%;}
+}
+
+@media screen and (max-width: 1440px) {
+    .header-container{
+        max-width: 1296px; /* 90% of 1440px */
+        margin: 0 auto;
+    }
 }

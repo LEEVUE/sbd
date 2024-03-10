@@ -72,18 +72,19 @@
         color: whitesmoke;
         text-decoration: none;
     }
-    .menu > li > a:active, .menu > li > a:focus {
+    .menu li a:active, .menu li a:focus {
         outline-width: 2px;
         outline-offset: -6px;
         outline-style: outset;
         outline-color: #38d6fe;
         min-width: max-content;
+        width: 100%;
     }
     .menu > li > a:hover {
         background-color: rgba(0, 0, 0, 0.1);
         color: whitesmoke;
     }
-    
+
     /* ໃສ່ເອັຟເຟັກຂີດເສັ້ນໃຕ້ຕອນເອົາເມົ້າໄປຊີ້ໃສ່ */
     a::after {
         content: "";
@@ -104,7 +105,7 @@
         transform: scaleX(1);
         height: 0.2rem;
     }
-    
+
     /* ກຳນົດເມນູຍ່ອຍ */
     .submenu {
         position: absolute;
@@ -127,7 +128,7 @@
         width: auto;
     }
     .submenu li a {
-        padding: 0px 10px;
+        padding: 0 10px;
         
     }
     li:hover .submenu {
@@ -137,88 +138,85 @@
     }
     .submenu li a:hover {
         background-color: #00344b;
-        color: #F9FBE7;
+        /* #00344b; */
+        color: white;
+        /* #F9FBE7; */
         border-radius: 4px;
-        width: 100%;
-    }
-    .submenu li a:active , .submenu li a:focus {
-        outline-width: 2px;
-        outline-offset: -6px;
-        outline-style: outset;
-        outline-color: #38d6fe;
         width: 100%;
     }
 
     /* ກຳນົດລູກສອນໝຸນ rolate ເວລາ hover */
-    .menu li span {
+    .react-icon {
+        vertical-align: text-top;
+    }
+    .menu li .ico-expand {
         margin-left: 5px;
         transition: all 0.3s ease-in-out;
     }
-    .menu :hover span {
+    .menu :hover .ico-expand {
         transform: rotate(-180deg);
     }
 
     /* ປັບປຸ່ມຄົ້ນຫາເອກະສານ */
     .search-box {
         display: flex;
-        justify-content: space-around;
-        border-radius: 0px;
+        align-items: center;
         align-items: center;
         color: whitesmoke;
-        transition: background-color 0.2s ease-in-out;
-        padding-left: 10px;
+        transition: background-color 0.4s ease-in-out;
+        padding-left: 15px;
+        border-radius: 20px;
     }
     .search-box:hover #search-field {
         cursor: pointer;
     }
-    #icon-search {
-        transition-duration: 0.2s;
-        transition-timing-function: ease-in-out;
+    .ico-search {
+        font-size: 14pt;
+        padding-right: 10px;
     }
-    .search-box span {
-        font-size: 30px;
-    }
-    .search-box #search-field::placeholder {
+    #search-field::placeholder {
         color: whitesmoke;
+        font-weight: bold;
     }
     .search-box:focus-within {
-        background-color: whitesmoke; /* เปลี่ยนสีพื้นหลังเมื่อคลิก */
-        height: 35px;
+        background-color: whitesmoke;
         color: #083c6f;
     }
-    #search-field {
+    .search-box #search-field {
         background: transparent;
         border: none;
-        width: 70px;
-        height: 35px;
+        width: 60px;
         font-family: "Phetsarath OT";
-        font-size: 14pt;
-        font-weight: bold;
+        font-size: 13pt;
         transition: 0.2s;
         transition: width 0.2s ease-in-out;
+        font-size: 12pt;
+        font-weight: normal;
     }
     .search-box:focus-within #search-field {
         outline: none;
-        width: 250px; /* ขยายความกว้างเมื่อคลิก */
+        max-width: 200px;
+        width: 200px;
     }
     .search-box:focus-within #search-field::placeholder  {
         color: lightgrey;
         font-size: 12pt;
     }
-    #icon-search
-    .search-box:focus-within #icon-search {
-        display: none;
+
+    /* ຈັດການຕົວປ່ຽນພາສາ */
+    .lang-container {
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-left: 10px;
     }
-    #let-search {
-        display: none;
-        opacity: 1;
-        transform: rotate(0deg);
-        transition: all 0.3s ease;
-        transition-behavior:initial;
+    .lang-container div {
+        padding-left: 5px;
     }
-    .search-box:focus-within #let-search {
-        display: block;
-        opacity: 1;
-        transform: rotate(360deg)
+}
+@media screen and (max-width: 1440px) {
+    menu{
+        max-width: 1296px; /* 90% of 1440px */
+        margin: 0 auto;
     }
 }

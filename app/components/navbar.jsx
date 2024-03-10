@@ -1,5 +1,9 @@
 import Link from "next/link"
 import "./navbar.css"
+import Image from "next/image"
+import { IoIosArrowDown } from "react-icons/io";
+import SystemsComponent from "./platform/systems";
+import { FiSearch } from "react-icons/fi";
 
 export default function Navbar() {
     return(
@@ -8,8 +12,8 @@ export default function Navbar() {
             <menu>
                 <ul className="menu">
                     <li><Link href="/">ໜ້າທຳອິດ</Link></li>
-                    <li><Link href="/legal">ພາລະບົດບາດ</Link></li>
-                    <li className="legal"><Link href="">ນິຕິກຳ<span class="material-symbols-outlined">expand_more</span></Link>
+                    <li><Link href="/role">ພາລະບົດບາດ</Link></li>
+                    <li className="legal"><Link href="/legal">ນິຕິກຳ< IoIosArrowDown className="react-icon ico-expand" /></Link>
                         <ul className="submenu">
                             <li><Link href="#">ກົດໝາຍ ແລະ ນິຕິກຳລຸ່ມກົດໝາຍ</Link></li>
                             <li><Link href="#">ສາລະບານງົບປະມານ-ບັນຊີ</Link></li>
@@ -17,23 +21,22 @@ export default function Navbar() {
                         </ul>
                     </li>
                     <li><Link href="/organization">ການເຄື່ອນໄຫວ</Link></li>
-                    <li id="platform"><Link href="">ລະບົບ<span class="material-symbols-outlined">expand_more</span></Link>
-                        <ul className="submenu">
-                            <li><Link href="https://rtis.gov.la/gfisplus" target="_blank">ລະບົບ GFIS Plus</Link></li>
-                            <li><Link href="#">ລະບົບ FMIS</Link></li>
-                            <li><Link href="#">ລະບົບ E-Reading</Link></li>
-                        </ul>
-                    </li>
                     <li><Link href="/organization">ໂຄງຮ່າງການຈັດຕັ້ງ</Link></li>
-                    <li><Link href="">ຕິດຕໍ່</Link></li>
+                    <SystemsComponent/>
+                    <li><Link href="">ຕິດຕໍ່ພົວພັນ</Link></li>
                 </ul>
                 <ul>
                     <li className="search-box">
-                        <span id="icon-search" class="material-symbols-outlined">search</span>
-                        <input type="search" name="search" id="search-field" placeholder="ຄົ້ນຫາ" />
-                        <span id="let-search" class="material-symbols-outlined">east</span>
+                        <input type="search" name="search" id="search-field" placeholder="ຄົ້ນຫາ" /><FiSearch className="ico-search"/>
                     </li>
-                    <div>ENG</div>
+                    <Link href="/" className="lang-container">
+                        <Image src="/LAO.svg" width={26} height={20} alt="My SVG" />
+                        <div>LAO</div>
+                    </Link>
+                    <Link href="/en" className="lang-container">
+                        <Image src="/ENG.svg" width={25} height={25} alt="My SVG" />
+                        <div>ENG</div>
+                    </Link>
                 </ul>
             </menu>
         </nav>

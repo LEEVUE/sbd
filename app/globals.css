@@ -1,6 +1,6 @@
 :root {
   --max-width: 1440px;
-  --header-height: 100px;
+  --header-height: 110px;
   --footer-height: 100px;
   --border-radius: 12px;
   --font-eng: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -38,6 +38,7 @@
   font-weight: 100 700;
   src: url(font/gicon-rounded.woff2) format('woff2');
 }
+
 /* ຕັ້ງຄ່າ google icons */
 .material-symbols-rounded {
   font-family: 'Material Symbols Rounded';
@@ -86,6 +87,7 @@
   'opsz' 24
 }
 
+/* ຕັ້ງຄ່າຂະໜາດຈໍໜ້າເວັບ */
 *{
   padding: 0;
   margin: 0;
@@ -101,7 +103,7 @@ body {
 .body-container {
   max-width: 1440px;
   margin: 0 auto;
-  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 48px);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 45px);
 }
 @media screen and (max-width: 1440px) {
   .body-container{
