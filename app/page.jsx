@@ -4,8 +4,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main>
-      <p>ໜ້າ HomePage</p>
-
+      <h1>ໜ້າ HomePage</h1>
     </main>
   );
 }

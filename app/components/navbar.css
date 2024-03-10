@@ -43,7 +43,15 @@
 /* ຕັ້ງຄ່າເມນູສຳລັບອຸປະກອນຂະໜາດຈໍໃຫຍ່ */
 @media screen and (min-width: 650px){
     nav {
-        background-color: #083c6f;
+        background-color: #083c6f; 
+    }
+    menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        line-height: 2.2;
     }
     nav ul {
         display: flex;
@@ -60,67 +68,23 @@
         list-style: none;
     }
     nav li a {
-        padding: 10px 15px;
-        color: white;
+        padding: 2px 15px;
+        color: whitesmoke;
         text-decoration: none;
     }
-    nav a:active {
-        outline: 5px;
-        background-color: brown;
+    .menu > li > a:active, .menu > li > a:focus {
+        outline-width: 2px;
+        outline-offset: -6px;
+        outline-style: outset;
+        outline-color: #38d6fe;
+        min-width: max-content;
     }
-    /* li a i {
-        margin-left: 5px;
-        font-size: 12px;
-        transition: 0.4s;
-    } */
     .menu > li > a:hover {
         background-color: rgba(0, 0, 0, 0.1);
-        color: #fff;
+        color: whitesmoke;
     }
     
-    /* ກຳນົດລູກສອນໝຸນໂອໂຕ້ເວລາ hover */
-    .submenu {
-        position: absolute;
-        display: block;
-        background-color: darkolivegreen;
-        top: 120%;
-        opacity: 0;
-        border-radius: 4px;
-        transition: 0.3s;
-        left: 0;
-        min-width: max-content;
-        visibility: hidden;
-        z-index: 1;
-        box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
-    }
-    .menu li span {
-        margin-left: 5px;
-        transition: 0.3s;
-    }
-    .menu :hover span {
-        transform: rotate(-180deg);
-    }
-    /* ກຳນົດລູກສອນໝຸນໂອໂຕ້ເວລາ hover */
-    
-    .submenu li {
-        font-size: 12pt;
-        font-weight: normal;
-        padding: 4px;
-        letter-spacing: 0;
-    }
-    .submenu li a {
-        padding: 7px 10px;
-    }
-    li:hover .submenu {
-        top: 110%;
-        opacity: 1;
-        visibility: visible;
-    }
-    .submenu li a:hover {
-        background-color: rgb(128, 255, 0);
-        border-radius: 4px;
-        width: 100%;
-    }
+    /* ໃສ່ເອັຟເຟັກຂີດເສັ້ນໃຕ້ຕອນເອົາເມົ້າໄປຊີ້ໃສ່ */
     a::after {
         content: "";
         position: absolute;
@@ -139,5 +103,122 @@
         opacity: 1;
         transform: scaleX(1);
         height: 0.2rem;
+    }
+    
+    /* ກຳນົດເມນູຍ່ອຍ */
+    .submenu {
+        position: absolute;
+        display: block;
+        min-width: max-content;
+        background-color: #004963;
+        top: 120%;
+        opacity: 0;
+        border-radius: 4px;
+        transition: 0.3s;
+        left: 0;
+        visibility: hidden;
+        z-index: 1;
+        box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+    }
+    .submenu li {
+        font-size: 12pt;
+        font-weight: normal;
+        letter-spacing: 0;
+        width: auto;
+    }
+    .submenu li a {
+        padding: 0px 10px;
+        
+    }
+    li:hover .submenu {
+        top: 105%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .submenu li a:hover {
+        background-color: #00344b;
+        color: #F9FBE7;
+        border-radius: 4px;
+        width: 100%;
+    }
+    .submenu li a:active , .submenu li a:focus {
+        outline-width: 2px;
+        outline-offset: -6px;
+        outline-style: outset;
+        outline-color: #38d6fe;
+        width: 100%;
+    }
+
+    /* ກຳນົດລູກສອນໝຸນ rolate ເວລາ hover */
+    .menu li span {
+        margin-left: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+    .menu :hover span {
+        transform: rotate(-180deg);
+    }
+
+    /* ປັບປຸ່ມຄົ້ນຫາເອກະສານ */
+    .search-box {
+        display: flex;
+        justify-content: space-around;
+        border-radius: 0px;
+        align-items: center;
+        color: whitesmoke;
+        transition: background-color 0.2s ease-in-out;
+        padding-left: 10px;
+    }
+    .search-box:hover #search-field {
+        cursor: pointer;
+    }
+    #icon-search {
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+    }
+    .search-box span {
+        font-size: 30px;
+    }
+    .search-box #search-field::placeholder {
+        color: whitesmoke;
+    }
+    .search-box:focus-within {
+        background-color: whitesmoke; /* เปลี่ยนสีพื้นหลังเมื่อคลิก */
+        height: 35px;
+        color: #083c6f;
+    }
+    #search-field {
+        background: transparent;
+        border: none;
+        width: 70px;
+        height: 35px;
+        font-family: "Phetsarath OT";
+        font-size: 14pt;
+        font-weight: bold;
+        transition: 0.2s;
+        transition: width 0.2s ease-in-out;
+    }
+    .search-box:focus-within #search-field {
+        outline: none;
+        width: 250px; /* ขยายความกว้างเมื่อคลิก */
+    }
+    .search-box:focus-within #search-field::placeholder  {
+        color: lightgrey;
+        font-size: 12pt;
+    }
+    #icon-search
+    .search-box:focus-within #icon-search {
+        display: none;
+    }
+    #let-search {
+        display: none;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+        transition-behavior:initial;
+    }
+    .search-box:focus-within #let-search {
+        display: block;
+        opacity: 1;
+        transform: rotate(360deg)
     }
 }

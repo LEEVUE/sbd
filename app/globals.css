@@ -103,6 +103,12 @@ body {
   margin: 0 auto;
   min-height: calc(100vh - var(--header-height) - var(--footer-height) - 48px);
 }
+@media screen and (max-width: 1440px) {
+  .body-container{
+    max-width: 1296px; /* 90% of 1440px */
+    margin: 0 auto;
+  }
+}
 #children{
   background: #ffff;
   /* box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1); */
