@@ -5,7 +5,7 @@ import { ReactDOM } from "react";
 export default function about() {
     return (
         <>
-            <h1 id="headtext">ພາລະບົດບາດ ຂອງກົມງົບປະມານແຫ່ງລັດ</h1>
+            <h1 id="headtext">ພາລະບົດບາດ ຂອງກົມງົບປະມານແຫ່ງລັດ <FaExpand style={{verticalAlign:"sub"}}/></h1>
             <Script src="./test.js"/>
         </>
     )

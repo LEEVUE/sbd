@@ -97,7 +97,7 @@
         border-radius: 1px;
         opacity: 0;
         transform: scaleX(0);
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
         transform-style:preserve-3d;
     }
     .menu > li > a:hover:after{
@@ -110,6 +110,7 @@
     .submenu {
         position: absolute;
         display: block;
+        color: #ffffff;
         min-width: max-content;
         background-color: #004963;
         top: 120%;
@@ -132,12 +133,13 @@
         
     }
     li:hover .submenu {
-        top: 105%;
+        top: 110%;
         opacity: 1;
         visibility: visible;
     }
     .submenu li a:hover {
         background-color: #00344b;
+        background-size: 100% 1px;
         /* #00344b; */
         color: white;
         /* #F9FBE7; */
@@ -145,6 +147,20 @@
         width: 100%;
     }
 
+    /* ກຳນົດ Submenu Level 2 */
+
+    /* .sub2 {
+        display: flex;
+        justify-content: space-between;
+    } */
+    .ico-forward {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        padding-right: 5px;
+    }
+
+    
     /* ກຳນົດລູກສອນໝຸນ rolate ເວລາ hover */
     .react-icon {
         vertical-align: text-top;

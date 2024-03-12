@@ -1,0 +1,28 @@
+nav {
+    background-color: blue;
+}
+menu {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 45px);
+    display: flex;
+    justify-content: space-between;
+}
+menu li {
+    list-style: none;
+    padding: 0 10px;
+}
+menu a {
+    text-decoration: none;
+    color: white;
+    line-height: 45px;
+}
+menu > ul {
+    display: flex;
+}
+@media screen and (max-width: 1440px) {
+    menu{
+        max-width: 1296px; /* 90% of 1440px */
+        margin: 0 auto;
+    }
+}

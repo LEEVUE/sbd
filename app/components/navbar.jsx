@@ -1,7 +1,7 @@
 import Link from "next/link"
-import "./navbar.css"
+import "./navbar2.css"
 import Image from "next/image"
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import SystemsComponent from "./platform/systems";
 import { FiSearch } from "react-icons/fi";
 
@@ -10,14 +10,21 @@ export default function Navbar() {
     <>
         <nav>
             <menu>
-                <ul className="menu">
+                <ul className="menu-container">
                     <li><Link href="/">ໜ້າທຳອິດ</Link></li>
                     <li><Link href="/role">ພາລະບົດບາດ</Link></li>
                     <li className="legal"><Link href="/legal">ນິຕິກຳ< IoIosArrowDown className="react-icon ico-expand" /></Link>
                         <ul className="submenu">
                             <li><Link href="#">ກົດໝາຍ ແລະ ນິຕິກຳລຸ່ມກົດໝາຍ</Link></li>
                             <li><Link href="#">ສາລະບານງົບປະມານ-ບັນຊີ</Link></li>
-                            <li><Link href="#">Dropdown 3</Link></li>
+                            <li className="sub2"><Link href="#"><span>Dropdown 3</span><IoIosArrowForward className="react-icon ico-forward"/></Link>
+                                <ul className="submenu-lv2">
+                                    <li><Link href="#">ຍ່ອຍ 1</Link></li>
+                                    <li><Link href="#">ຍ່ອຍ 2</Link></li>
+                                    <li><Link href="#">ຍ່ອຍ 3</Link></li>
+                                </ul>
+                            </li>
+                            <li><Link href="#">TEst</Link></li>
                         </ul>
                     </li>
                     <li><Link href="/organization">ການເຄື່ອນໄຫວ</Link></li>
